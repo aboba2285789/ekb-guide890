@@ -1,0 +1,180 @@
+/* Общие */
+:root{
+  --accent: #304ffe;
+  --muted: #6b7280;
+  --card-bg: #ffffffeee
+}
+
+/* Шапка */
+.hero{
+  text-align:center;
+  padding:36px 20px 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.35));
+  backdrop-filter: blur(4px);
+}
+.logo{ width:140px; height:auto; display:block; margin:0 auto 10px; }
+.hero h1{ margin:6px 0; font-size:28px; color:#0f172a; }
+.subtitle{ margin:0; color:var(--muted); }
+
+/* Центральная кнопка */
+.center-btn-wrap{ margin-top:18px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.main-btn{
+  background:var(--accent); color:#fff; border:none; padding:14px 28px;
+  border-radius:12px; font-weight:700; font-size:16px; cursor:pointer;
+  box-shadow: 0 6px 18px rgba(48,78,254,0.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.main-btn:hover{ transform:translateY(-3px); box-shadow: 0 12px 30px rgba(48,78,254,0.22); }
+.small-link{ color:var(--muted); font-size:13px; text-decoration:none; }
+
+/* Секция и сетка категорий */
+.content{ max-width:1100px; margin:28px auto; padding:0 18px 40px; }
+.section-title{ font-size:18px; margin:10px 0 16px; color:#0b1220; text-align:center; }
+.grid-cats{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:14px;
+  align-items:stretch;
+}
+.cat{
+  background: var(--card-bg);
+  border-radius:12px;
+  border: 1px solid rgba(15,23,42,0.06);
+  padding:16px;
+  font-weight:600;
+  font-size:15px;
+  color:#0b1220;
+  cursor:pointer;
+  box-shadow: 0 4px 10px rgba(2,6,23,0.03);
+  transition: transform .18s ease, box-shadow .18s ease, background .12s ease;
+  text-align:center;
+}
+.cat:hover{ transform: translateY(-6px); box-shadow: 0 10px 26px rgba(2,6,23,0.06); background: #ffffff; }
+
+
+/* Подвал */
+.footer{ text-align:center; padding:18px 10px; color:#fff; background:rgba(9,10,12,0.65); position:sticky; bottom:0; }
+
+/* Адаптация */
+@media (max-width:640px){
+  .hero h1{ font-size:20px; }
+  .main-btn{ padding:12px 22px; font-size:15px; }
+  .grid-cats{ gap:10px; }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url("img/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Общие стили кнопок */
+.cat, .main-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #222;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Эффект при наведении */
+.cat:hover, .main-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Кнопка "перейти на карту" */
+.main-btn {
+  top: 460px;
+  left: 850px;
+  width: 400px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: #1b1b1b;
+  font-size: 18px;
+}
+
+/* Расположение категорий */
+.cat-architecture { top: 630px; left: 380px; width: 150px; height: 80px; }
+.cat-military { top: 630px; left: 580px; width: 150px; height: 80px; }
+.cat-city { top: 630px; left: 780px; width: 150px; height: 80px; }
+.cat-industry { top: 630px; left: 980px; width: 150px; height: 80px; }
+.cat-literature { top: 630px; left: 1180px; width: 150px; height: 80px; }
+
+.cat-music { top: 750px; left: 380px; width: 150px; height: 80px; }
+.cat-science { top: 750px; left: 580px; width: 150px; height: 80px; }
+.cat-parks { top: 750px; left: 780px; width: 150px; height: 80px; }
+.cat-religion { top: 750px; left: 980px; width: 150px; height: 80px; }
+.cat-constructivism { top: 750px; left: 1180px; width: 150px; height: 80px; }
+/* ===== ФОН САЙТА ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  background-size: 100% 90%; /* ← масштаб по вертикали */
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+
+}
+
+/* ===== ОБЩИЕ СТИЛИ КНОПОК ===== */
+.cat, .main-btn {
+  position: absolute;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.cat:hover, .main-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* ===== РАСПОЛОЖЕНИЕ КНОПОК (1920×1080) ===== */
+
+/* Центральная кнопка "Перейти на карту" */
+.cat-map {
+  background-image: url("../img/btn-map.png");
+  width: 620px;
+  height: 80px;
+  top: 642px;
+  left: 1080px;
+}
+
+/* Ряд 1 */
+.cat-architecture { background-image: url("../img/btn-architecture.png"); top: 790px; left: 315px; width: 235px; height: 165px; }
+.cat-military     { background-image: url("../img/btn-military.png");     top: 790px; left: 717px; width: 235px; height: 165px; }
+.cat-city         { background-image: url("../img/btn-city.png");         top: 790px; left: 1111px; width: 235px; height: 165px; }
+.cat-industry     { background-image: url("../img/btn-industry.png");     top: 790px; left: 1510px; width: 235px; height: 165px; }
+.cat-literature   { background-image: url("../img/btn-literature.png");   top: 790px; left: 1910px; width: 235px; height: 165px; }
+
+/* Ряд 2 */
+.cat-music        { background-image: url("../img/btn-music.png");        top: 1020px; left: 312px; width: 235px; height: 165px; }
+.cat-science      { background-image: url("../img/btn-science.png");      top: 1020px; left: 717px; width: 240px; height: 165px; }
+.cat-parks        { background-image: url("../img/btn-parks.png");        top: 1020px; left: 1111px; width: 235px; height: 165px; }
+.cat-religion     { background-image: url("../img/btn-religion.png");     top: 1020px; left: 1510px; width: 235px; height: 165px; }
+.cat-constructivism { background-image: url("../img/btn-constructivism.png"); top: 1020px; left: 1910px; width: 235px; height: 165px; }
+.image-btn {
+  background-size: 99% auto;  /* ← уменьшает картинку до 90% ширины кнопки */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html, body { height: 100%; margin:0; }
